@@ -31,7 +31,7 @@
 		</object>
 		<object>
 			<name>Logout</name>
-			<value>xpath://li[3]/a</value>
+			<value>xpath://div[@id='welcome-menu']/ul/li[3]/a</value>
 			<type>Bouton</type>
 		</object>
 	</page>
@@ -88,6 +88,23 @@
 			<value>id:menu_pim_addEmployee</value>
 			<type>Lien</type>
 		</object>
+		
+		
+		<object>
+			<name>Conge</name>
+			<value>css:#menu_leave_viewLeaveModule > b</value>
+			<type>Lien</type>
+		</object>
+		
+		<object>
+			<name>AtribuerConge</name>
+			<value>id:menu_leave_assignLeave</value>
+			<type>Lien</type>
+		</object>
+		
+		
+		
+		
 		<object>
 			<name>Admin_ViewLocations</name>
 			<value>id:menu_admin_viewLocations</value>
@@ -211,10 +228,23 @@
 			<type>Champ</type>
 		</object>
 		<object>
+			<name>EmployeeId</name>
+			<value>id:empsearch_id</value>
+			<type>Champ</type>
+		</object>
+		<object>
 			<name>LienHassan</name>
 			<value>link:Hassan</value>
 			<type>Lien</type>
 		</object>
+		
+		<object>
+			<name>Ligne1_Nom</name>
+			<value>xpath://td[3]/a</value>
+			<type>Lien</type>
+		</object>
+		
+		
 		<object>
 			<name>EmployeeNameResult</name>
 			<value>xpath://li[contains(text(), #nn#)]</value>
@@ -236,6 +266,16 @@
 			<type>Champ</type>
 		</object>
 		<object>
+			<name>SelectChkBxGeneric</name>
+			<value>id:ohrmList_chkSelectRecord_$1$</value>
+			<type>Champ</type>
+		</object>
+		<object>
+			<name>Message</name>
+			<value>xpath://table[@id='resultTable']/tbody/tr/td</value>
+			<type>Lien</type>
+		</object>
+		<object>
 			<name>DeleteEmployees</name>
 			<value>id:btnDelete</value>
 			<type>Champ</type>
@@ -245,11 +285,7 @@
 			<value>id:dialogDeleteBtn</value>
 			<type>Champ</type>
 		</object>
-		<object>
-			<name>Premier</name>
-			<value>xpath://table[@id='resultTable']/tbody/tr/td[2]/a</value>
-			<type>Lien</type>
-		</object>
+	
 	</page>
 	<page>
 		<name>PIM_AddEmployee</name>
@@ -457,6 +493,20 @@
 			<name>Save</name>
 			<value>id:btnSave</value>
 			<type>Bouton</type>
+		</object>
+	</page>
+	<page>
+		<name>AttribuerConges</name>
+		<type>normal</type>
+		<object>
+			<name>NomEmploye</name>
+			<value>id:assignleave_txtEmployee_empName</value>
+			<type>Champ</type>
+		</object>
+		<object>
+			<name>TypeAbsence</name>
+			<value>id:assignleave_txtLeaveType</value>
+			<type>Liste</type>
 		</object>
 	</page>
 </main>
