@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class OrangeHRM {
+public class TestNGDemo {
   private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
@@ -18,7 +18,7 @@ public class OrangeHRM {
 
   @BeforeClass(alwaysRun = true)
   public void setUp() throws Exception {
-    System.setProperty("webdriver.chrome.driver", "D:/DVLP/drivers/chromedriver.exe");
+    System.setProperty("webdriver.chrome.driver", "D:/Formation/Selenium/Webdriver/chromedriver.exe");
 	ChromeOptions options = new ChromeOptions();
 	options.addArguments("disable-infobars");
 	options.addArguments("--start-minimized");
@@ -36,9 +36,12 @@ public class OrangeHRM {
 
     driver.findElement(By.id("txtUsername")).clear();
     driver.findElement(By.id("txtUsername")).sendKeys("admin");
+    
     driver.findElement(By.id("txtPassword")).clear();
     driver.findElement(By.id("txtPassword")).sendKeys("test");
+    
     driver.findElement(By.id("btnLogin")).click();
+    
     for (int second = 0;; second++) {
     	if (second >= 60) fail("timeout");
     	try { if (isElementPresent(By.id("welcome"))) break; } catch (Exception e) {}
